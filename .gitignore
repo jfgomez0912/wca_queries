@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Repo Sepecific Folders
+sql/*
+export/*
+output/*
+!.gitkeep
