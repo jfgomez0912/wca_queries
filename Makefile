@@ -12,7 +12,8 @@ run: ./sql/WCA_export.sql clean
 	docker run -d --env-file .env -v ./sql/:/docker-entrypoint-initdb.d -p 3306:3306 --name wca-db mariadb:latest
 
 clean:
+	rm -rf ./export/* ./output/* ./sql/*
 	docker stop wca-db
 	docker rm wca-db
 
-.PHONY: export build run clean
+.PHONY: export run clean
